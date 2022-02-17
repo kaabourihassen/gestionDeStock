@@ -1,0 +1,29 @@
+<div class="flex flex-col w-auto rounded-lg m-24 p-6">
+  <div class="flex w-full justify-between items-center p-4 mb-12">
+    <h1 class="text-4xl font-bold text-blue-600">Operations</h1>
+    <button class="bg-blue-50 text-blue-600 font-semibold px-6 py-2 rounded-lg hover:bg-blue-200 transition"
+            [routerLink]="['/operationMaterielVForm']">
+      return a Materiel
+    </button>
+    <button class="bg-blue-50 text-blue-600 font-semibold px-6 py-2 rounded-lg hover:bg-blue-200 transition"
+            [routerLink]="['/operationMaterielRForm']">
+      get a materiel
+    </button>
+  </div>
+  <div class="dashboard-table p-6" >
+    <div class="titles grid grid-cols-5 pb-2 border-b-2 border-gray-200">
+      <p class="font-semibold text-gray-700">Nature Operation</p>
+      <p class="font-semibold text-gray-700">matricule produit</p>
+      <p class="font-semibold text-gray-700">Date Retour</p>
+      <p class="font-semibold text-gray-700">User FullName</p>
+      <p class="font-semibold text-gray-700">Actions</p>
+    </div>
+    <div class="mt-6">
+      <app-operation *ngFor="let operation of operationsList;
+        let i=index" [index]="i" [operation]="operation">
+      </app-operation>
+    </div>
+  </div>
+</div>
+
+

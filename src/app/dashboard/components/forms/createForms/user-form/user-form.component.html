@@ -1,0 +1,56 @@
+<section class="">
+  <div class="container overflow-hidden">
+    <div class=" flex flex-col justify-center items-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="w-full max-w-xl mx-auto lg:w-96">
+        <div>
+          <h2 class="mt-6 text-3xl font-extrabold text-neutral-600"> create User </h2>
+        </div>
+        <div class="mt-8">
+          <div class="mt-6">
+            <form class="space-y-6" [formGroup]="form">
+              <div>
+                <label for="CIN" class="block text-sm font-medium text-neutral-600"> CIN </label>
+                <div class="mt-1">
+                  <input id="CIN" formControlName="CIN" name="CIN" type="text" autocomplete="CIN" required="" placeholder="Your CIN" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="fullName" class="block text-sm font-medium text-neutral-600"> Full Name </label>
+                <div class="mt-1">
+                  <input id="fullName" formControlName="fullName" name="fullName" type="text" autocomplete="fullName" required=""
+                         placeholder="Your full name" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
+                <div class="mt-1">
+                  <input id="email" formControlName="email" name="email" type="email" autocomplete="email" required="" placeholder="Your Email"
+                         class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="age" class="block text-sm font-medium text-neutral-600"> Age </label>
+                <div class="mt-1">
+                  <input id="age" formControlName="age" name="age" type="number" autocomplete="age"
+                         placeholder="Your Age" class="inputClass">
+                </div>
+              </div>
+              <div class="space-y-1">
+                <label for="password" formControlName="password" class="block text-sm font-medium text-neutral-600"> Password </label>
+                <div class="mt-1">
+                  <input id="password" name="password" type="password" autocomplete="current-password" required=""
+                         placeholder="Your Password" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="submitButton" (click)="createUser()"> Create User </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

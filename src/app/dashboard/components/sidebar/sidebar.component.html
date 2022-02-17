@@ -1,0 +1,97 @@
+<div class="flex flex-col m-4" *ngIf="canActivate">
+  <h1 class="flex p-4 items-center space-x-2  text-2xl font-bold text-blue-700 mb-12">
+    <svg (click)="isClosed=!isClosed" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Dashboard
+    </span>
+    </h1>
+ <div class="flex-1">
+   <a [routerLink]="['/operationsMaterielsList']" class="linkWithIcon" *ngIf="hideLink()==1||hideLink()==3" routerLinkActive="activeRouter">
+     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+             d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+     </svg>
+     <span *ngIf="!isClosed">
+      Operations on Materiels
+    </span>
+   </a>
+   <a [routerLink]="['/operationsArticlesList']" class="linkWithIcon" *ngIf="hideLink()==2||hideLink()==3" routerLinkActive="activeRouter">
+     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+             d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+     </svg>
+     <span *ngIf="!isClosed">
+      Operations on Articles
+    </span>
+   </a>
+  <a [routerLink]="['/articlesList']" class="linkWithIcon" *ngIf="hideLink()==2||hideLink()==3" routerLinkActive="activeRouter">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Articles Managment
+    </span>
+  </a>
+  <a [routerLink]="['/materielsList']" *ngIf="hideLink()==1||hideLink()==3" class="linkWithIcon" routerLinkActive="activeRouter">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Materiels Managment
+    </span>
+  </a>
+  <a [routerLink]="['/usersList']" class="linkWithIcon" routerLinkActive="activeRouter">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Users Managment
+    </span>
+  </a>
+  <a [routerLink]="['/magazinsList']" class="linkWithIcon" routerLinkActive="activeRouter">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Magazins Management
+    </span>
+  </a>
+  <a [routerLink]="['/categoriesList']" class="linkWithIcon" routerLinkActive="activeRouter">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Categories Management
+    </span>
+  </a>
+   <a [routerLink]="['/adminDashboard']" class="linkWithIcon" *ngIf="hideLink()==3" routerLinkActive="activeRouter">
+     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+             d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+     </svg>
+     <span *ngIf="!isClosed">
+      Roles management
+    </span>
+   </a>
+ </div>
+
+ <div class="account-setings justify-self-end" (click)="logout()">
+  <a class="flex items-center space-x-2 font-semibold w-full p-4 text-red-600 hover:text-red-600 hover:bg-red-50 cursor-pointer rounded-lg transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+    </svg>
+    <span *ngIf="!isClosed">
+      Log Out
+    </span>
+  </a>
+ </div>
+
+
+</div>

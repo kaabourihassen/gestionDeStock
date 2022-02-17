@@ -1,0 +1,52 @@
+<section>
+  <div class="overflow-hidden">
+    <div class="flex flex-col justify-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="w-full max-w-xl mx-auto lg:w-96">
+        <div>
+          <h2 class="mt-6 text-3xl font-extrabold text-neutral-600"> Materiel Form </h2>
+        </div>
+        <div class="mt-8">
+          <div class="mt-6">
+            <form class="space-y-6" [formGroup]="form">
+              <div>
+                <label for="intitule" class="block text-sm font-medium text-neutral-600"> intitule </label>
+                <div class="mt-1">
+                  <input id="intitule" formControlName="intitule" name="intitule" type="text" autocomplete="intitule"
+                         placeholder="intitule" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="matricule" class="block text-sm font-medium text-neutral-600"> matricule </label>
+                <div class="mt-1">
+                  <input id="matricule" formControlName="matricule" name="matricule" type="text" autocomplete="matricule"
+                         placeholder="matricule" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label class="block">
+                  <span class="text-gray-700">Select Magazin</span>
+                  <select class="form-select block w-full mt-1 inputClass" formControlName="magazinId" name="magazin" >
+                    <option *ngFor="let magazin of magazinsList" [value]="magazin.magazinId">{{magazin.nomMagazin}}</option>
+                  </select>
+                </label>
+              </div>
+              <div>
+                <label class="block">
+                  <span class="text-gray-700">Select Category</span>
+                  <select class="form-select block w-full mt-1 inputClass" formControlName="categoryId" >
+                    <option *ngFor="let category of categoriesList" [value]="category.categoryId">{{category.nomCateg}}</option>
+                  </select>
+                </label>
+              </div>
+              <div>
+                <button type="submit" class="submitButton" (click)="updateMateriel()"> Create Materiel </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

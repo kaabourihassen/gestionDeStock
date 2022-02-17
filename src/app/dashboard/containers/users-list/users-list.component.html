@@ -1,0 +1,19 @@
+<div class="flex flex-col w-auto rounded-lg m-24 p-6">
+  <div class="flex w-full justify-between items-center p-4 mb-12">
+    <h1 class="text-4xl font-bold text-blue-600">Users</h1>
+    <button class="bg-blue-50 text-blue-600 font-semibold px-6 py-2 rounded-lg hover:bg-blue-200 transition" [routerLink]="['/userForm']">Add User</button>
+  </div>
+
+  <div class="dashboard-table p-6" >
+    <div class="titles grid grid-cols-5 pb-2 border-b-2 border-gray-200">
+      <p class="font-semibold text-gray-700">Full Name</p>
+      <p class="font-semibold text-gray-700">Email</p>
+      <p class="font-semibold text-gray-700">Cin</p>
+      <p class="font-semibold text-gray-700">Age</p>
+      <p class="font-semibold text-gray-700">Actions</p>
+    </div>
+    <div class="mt-6">
+      <app-user *ngFor="let user of usersList; let i=index" [index]="i" [user]="user"></app-user>
+    </div>
+  </div>
+</div>

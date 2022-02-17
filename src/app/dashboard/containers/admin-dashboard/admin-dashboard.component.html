@@ -1,0 +1,31 @@
+<div class="flex flex-col w-auto rounded-lg m-24 p-6">
+  <div class="flex w-full justify-between items-center p-4 mb-12">
+    <h1 class="text-4xl font-bold text-blue-600">Admin Dashboard</h1>
+    <button class="bg-blue-50 text-blue-600 font-semibold px-6 py-2 rounded-lg hover:bg-blue-200 transition"
+            [routerLink]="['/userForm']">Add User</button>
+  </div>
+  <div class="flex w-full justify-between items-center p-4 mb-12">
+    <a [routerLink]="['/adminDashboard/adminUsersList']" routerLinkActive="activeRouter" class="linkAdminDashboard">
+      <span class="justify-center items-center">
+      Users List
+    </span>
+    </a>
+    <a [routerLink]="['/adminDashboard/adminRESPARTsList']" routerLinkActive="activeRouter" class="linkAdminDashboard">
+      <span class="justify-center items-center">
+      Resonsables Articles List
+    </span>
+    </a>
+    <a [routerLink]="['/adminDashboard/adminRESPMATsList']" routerLinkActive="activeRouter" class="linkAdminDashboard">
+      <span class="justify-center items-center">
+      Responsables Materiels List
+    </span>
+    </a>
+    <a [routerLink]="['/adminDashboard/adminAdminList']" routerLinkActive="activeRouter" class="linkAdminDashboard">
+      <span class="justify-center items-center">
+      Admins List
+    </span>
+    </a>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

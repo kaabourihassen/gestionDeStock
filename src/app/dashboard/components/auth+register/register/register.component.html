@@ -1,0 +1,61 @@
+<div class="flex h-screen justify-between items-center">
+  <div class="illustrationContainer max-w-4xl">
+    <img src="/assets/LoginIllustration.png" alt="">
+  </div>
+
+  <section class="text-blueGray-700 flex-1 bg-blue-50 h-screen flex items-center">
+    <div class="container items-center px-5 py-12 lg:px-20">
+      <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
+        <h1 class="text-4xl font-bold text-gray-800">Register</h1>
+        <div class="mt-8">
+          <div class="mt-6">
+
+            <form [formGroup]="form" class="space-y-6">
+              <div>
+                <label for="cin" class="block text-sm font-medium text-neutral-600"> CIN </label>
+                <div class="mt-1">
+                  <input id="cin" formControlName="cin" name="cin" type="text" autocomplete="cin" required="" placeholder="Your CIN" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="fullName" class="block text-sm font-medium text-neutral-600"> Full Name </label>
+                <div class="mt-1">
+                  <input id="fullName"formControlName="fullName" name="fullName" type="text" autocomplete="fullName" required=""
+                         placeholder="Your full name" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
+                <div class="mt-1">
+                  <input id="email" formControlName="email" name="email" type="email" autocomplete="email" placeholder="Your Email"
+                         class="inputClass">
+                </div>
+              </div>
+              <div>
+                <label for="age" class="block text-sm font-medium text-neutral-600"> Age </label>
+                <div class="mt-1">
+                  <input id="age" name="age" formControlName="age" type="number" autocomplete="age" required="" placeholder="Your age"
+                         class="inputClass">
+                </div>
+              </div>
+              <div class="space-y-1">
+                <label for="password" class="block text-sm font-medium text-neutral-600"> Password </label>
+                <div class="mt-1">
+                  <input id="password" formControlName="password" name="password" type="password" autocomplete="current-password" required=""
+                         placeholder="Your Password" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="submitButton" (click)="register()"> Sign Up </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+

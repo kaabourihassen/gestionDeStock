@@ -1,0 +1,28 @@
+<section>
+  <div class="overflow-hidden">
+    <div class="flex flex-col justify-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="w-full max-w-xl mx-auto lg:w-96">
+        <div>
+          <h2 class="mt-6 text-3xl font-extrabold text-neutral-600"> Magazin Form </h2>
+        </div>
+        <div class="mt-8">
+          <div class="mt-6">
+            <form [formGroup]="form" class="space-y-6">
+              <div>
+                <label for="nomMagazin" class="block text-sm font-medium text-neutral-600"> Nom Magazin </label>
+                <div class="mt-1">
+                  <input id="nomMagazin" formControlName="nomMagazin" name="nomMagazin" type="text" autocomplete="nomMagazin" required="" placeholder="Nom Magazin" class="inputClass">
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="submitButton" (click)="createMagazin()"> Create Magazin </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
